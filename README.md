@@ -24,7 +24,7 @@ Table of Contents
 Enumerations
 ------------
 
-##### `enum mcp4725_power_down_t`
+#### `enum mcp4725_power_down_t`
 
 The normal and power-down modes.
 
@@ -38,7 +38,7 @@ The normal and power-down modes.
 Structures
 ----------
 
-##### `mcp4725_config_t`
+#### `mcp4725_config_t`
 
 MCP4725 configuration.
 
@@ -52,7 +52,7 @@ MCP4725 configuration.
   * `ticks_to_wait` must be at least 1 tick
 
 
-##### `struct mcp4725_eeprom_t`
+#### `struct mcp4725_eeprom_t`
 
 Stores the eeprom data for reading and writing.
 
@@ -66,7 +66,7 @@ Stores the eeprom data for reading and writing.
 Functions
 ---------
 
-##### `esp_err_t mcp4725_set_voltage(mcp4725_config_t dac,uint16_t value)`
+#### `esp_err_t mcp4725_set_voltage(mcp4725_config_t dac,uint16_t value)`
 
 Sets the voltage on the MCP4725.
 
@@ -86,7 +86,7 @@ Sets the voltage on the MCP4725.
   * This will wake from power-down mode, if set.
 
 
-### `esp_err_t mcp4725_power_down(mcp4725_config_t dac,mcp4725_power_down_t mode)`
+#### `esp_err_t mcp4725_power_down(mcp4725_config_t dac,mcp4725_power_down_t mode)`
 
 Puts the device into the desired power-down mode. 
 
@@ -105,7 +105,7 @@ Puts the device into the desired power-down mode.
   * Also writes a `value` of 0 to the dac.
 
 
-##### `esp_err_t mcp4725_read_eeprom(mcp4725_config_t dac,mcp4725_eeprom_t* eeprom)`
+#### `esp_err_t mcp4725_read_eeprom(mcp4725_config_t dac,mcp4725_eeprom_t* eeprom)`
 
 Read the values to be set at start from the eeprom and puts them in `eeprom`.
 
@@ -121,7 +121,7 @@ Read the values to be set at start from the eeprom and puts them in `eeprom`.
   * ESP_ERR_TIMEOUT: Operation timeout because the bus is busy.
 
 
-##### `esp_err_t mcp4725_write_eeprom(mcp4725_config_t dac,mcp4725_eeprom_t eeprom)`
+#### `esp_err_t mcp4725_write_eeprom(mcp4725_config_t dac,mcp4725_eeprom_t eeprom)`
 
 Write values to be set at start to the eeprom.
 
