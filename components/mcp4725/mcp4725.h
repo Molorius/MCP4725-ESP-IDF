@@ -1,5 +1,10 @@
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #ifndef MCP4725_H
 #define MCP4725_H
+
 
 #include <stdio.h>
 #include "driver/i2c.h"
@@ -32,4 +37,8 @@ esp_err_t mcp4725_power_down(mcp4725_config_t dac,mcp4725_power_down_t mode);
 esp_err_t mcp4725_read_eeprom(mcp4725_config_t dac,mcp4725_eeprom_t* eeprom);
 esp_err_t mcp4725_write_eeprom(mcp4725_config_t dac,mcp4725_eeprom_t eeprom);
 
+#endif
+
+#ifdef __cplusplus
+}
 #endif
